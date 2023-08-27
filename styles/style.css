@@ -44,7 +44,7 @@ body {
     box-sizing: border-box;
     padding: 5px;
     border: 2px solid black;
-    flex: auto;
+    flex: 1 0 auto;
     min-width: 10px;
     min-height: 10px;
 
@@ -52,11 +52,9 @@ body {
 }
 
 .canvas {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     width: 400px;
     height: 400px;
-    align-items: stretch;
     background-color: white;
-
 }
