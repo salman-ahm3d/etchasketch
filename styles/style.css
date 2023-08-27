@@ -38,3 +38,25 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.pixel {
+    display: flex;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 2px solid black;
+    flex: auto;
+    min-width: 10px;
+    min-height: 10px;
+
+    
+}
+
+.canvas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    align-items: stretch;
+    background-color: white;
+
+}
