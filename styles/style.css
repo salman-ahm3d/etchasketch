@@ -44,16 +44,18 @@ body {
     box-sizing: border-box;
     padding: 5px;
     border: 2px solid black;
+    aspect-ratio: 1/1;
     flex: 1 0 auto;
     min-width: 10px;
-    min-height: 10px;
+    height: auto;
 
     
 }
 
 .canvas {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
     width: 400px;
     height: 400px;
     background-color: white;
