@@ -1,5 +1,6 @@
 
-let currentSelected;
+
+
 
 function createCanvas() {
     let myNode;
@@ -14,12 +15,15 @@ function createCanvas() {
 function colorOnClick() {
     pixels.forEach((pixel) => {
         pixel.addEventListener('mousemove', function() {
-            if (isAPressed) {
-                document.getElementById(pixel.id).style.backgroundColor = 'black';
+            if (isAPressed && !eraserEnabled) {
+                document.getElementById(pixel.id).style.backgroundColor = currentColor;
+            } else if (isAPressed && eraserEnabled) {
+                document.getElementById(pixel.id).style.backgroundColor = 'white';
             }
         });
     })
 }
+
 
 
 
@@ -44,7 +48,28 @@ let isAPressed = false;
 const canvas = document.querySelector(".canvas");
 createCanvas();
 const pixels = document.querySelectorAll(".pixel");
-const defaultColor = 'black';
+const currentColor = 'black';
+const eraserBtn = document.querySelector(".eraser-btn");
+const clearBtn = document.querySelector(".clear-btn");
+
+let prevColor;
+
+let eraserEnabled = false;
+
+eraserBtn.addEventListener('click', () => {
+    if (!eraserEnabled) {
+        eraserEnabled = true;
+    } else {
+        eraserEnabled = false;
+    }
+})
+
+
+clearBtn.addEventListener('click', () => {
+    pixels.forEach((pixel) => {
+        document.getElementById(pixel.id).style.backgroundColor = 'white';
+    })
+})
 
 
 
