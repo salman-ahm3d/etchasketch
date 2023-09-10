@@ -67,12 +67,16 @@ body {
     padding: 5px;
 }
 
-.eraser-btn, .clear-btn {
+.eraser-btn, .clear-btn, .color-picker-btn {
     background-color: #eeecff;
     padding: 5px;
     border: 2px solid #3C4F76;
     margin: 2px;
-    width: 60px;
+    width: 120px;
+}
+
+.color-picker-btn {
+    padding: 5px 1px;
 }
 .clicked {
     background-color: #9f9f9f;
