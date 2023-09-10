@@ -13,8 +13,10 @@ function createCanvas() {
 
 function colorOnClick() {
     pixels.forEach((pixel) => {
-        pixel.addEventListener('dragenter', function() {
-            document.getElementById(pixel.id).style.backgroundColor = 'black';
+        pixel.addEventListener('mousemove', function() {
+            if (isAPressed) {
+                document.getElementById(pixel.id).style.backgroundColor = 'black';
+            }
         });
     })
 }
@@ -22,9 +24,22 @@ function colorOnClick() {
 
 
 
-let mouseDown = false
-document.body.onmousedown = () => (mouseDown = true)
-document.body.onmouseup = () => (mouseDown = false)
+
+let isAPressed = false;
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'a' || event.key === 'A') {
+        isAPressed = true;
+      }
+    });
+
+    document.addEventListener('keyup', function (event) {
+      if (event.key === 'a' || event.key === 'A') {
+        isAPressed = false;
+      }
+    });
+
+
 
 const canvas = document.querySelector(".canvas");
 createCanvas();
