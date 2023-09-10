@@ -48,9 +48,11 @@ let isAPressed = false;
 const canvas = document.querySelector(".canvas");
 createCanvas();
 const pixels = document.querySelectorAll(".pixel");
-const currentColor = 'black';
+let currentColor = 'black';
 const eraserBtn = document.querySelector(".eraser-btn");
 const clearBtn = document.querySelector(".clear-btn");
+const colorPickerBtn = document.querySelector(".color-picker-btn");
+
 
 let prevColor;
 
@@ -71,6 +73,11 @@ clearBtn.addEventListener('click', () => {
     pixels.forEach((pixel) => {
         document.getElementById(pixel.id).style.backgroundColor = 'white';
     })
+})
+
+colorPickerBtn.addEventListener('change', () => {
+    currentColor = colorPickerBtn.jscolor.toRGBString();
+    console.log(currentColor);
 })
 
 
