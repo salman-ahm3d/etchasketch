@@ -74,3 +74,6 @@ body {
     margin: 2px;
     width: 60px;
 }
+.clicked {
+    background-color: #9f9f9f;
+}

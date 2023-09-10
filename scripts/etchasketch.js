@@ -59,8 +59,10 @@ let eraserEnabled = false;
 eraserBtn.addEventListener('click', () => {
     if (!eraserEnabled) {
         eraserEnabled = true;
+        eraserBtn.classList.add("clicked");
     } else {
         eraserEnabled = false;
+        eraserBtn.classList.remove("clicked");
     }
 })
 
