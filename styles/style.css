@@ -7,6 +7,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
 .header {
     display: flex;
     justify-content: flex-start;
@@ -19,13 +20,13 @@ body {
 
 .body {
     display: flex;
-    flex-wrap: wrap;
     background-color: #D1BEB0;
     justify-content: space-around;
     align-items: center;
     padding: 12px;
-    height: 100%;
-    min-height: 100%;
+    position: fixed;
+    height: calc(100vh - 8px - 26px - 70px); /* Calculate height minus header and footer */
+    width: 100%;
 }
 
 .footer {
@@ -39,6 +40,10 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+.header, .footer {
+    flex: none;
 }
 
 .drawing-area, .options-area {
@@ -71,6 +76,7 @@ body {
 .instructions {
     background-color: #D1BEB0;
     padding: 5px;
+    padding-bottom: 0px;
 }
 
 .eraser-btn, .clear-btn, .color-picker-btn {
