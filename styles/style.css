@@ -18,6 +18,7 @@ body {
 
 .body {
     display: flex;
+    flex-wrap: wrap;
     background-color: #D1BEB0;
     justify-content: space-around;
     align-items: center;
@@ -59,4 +60,9 @@ body {
     width: 400px;
     height: 400px;
     background-color: white;
+}
+
+.instructions {
+    background-color: #D1BEB0;
+    padding: 5px;
 }
