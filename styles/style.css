@@ -5,17 +5,6 @@
 }
 
 
-
-.header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #F2C57C;
-    color: #eeecff;
-    padding: 8px;
-    font-size: 26px;
-}
-
 .body {
     display: flex;
     background-color: #7FB685;
@@ -39,9 +28,10 @@
     width: 100%;
 }
 
-.header, .footer {
+.footer {
     flex: none;
     background-color: #426A5A;
+    font-size: 24px;
 }
 
 .drawing-area, .options-area {
@@ -66,8 +56,8 @@
     display: grid;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(16,1fr);
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     background-color: white;
     border: 2px solid black;
 }
@@ -75,8 +65,8 @@
 .instructions {
     padding: 5px;
     padding-bottom: 0px;
-    max-width: 400px;
     color: white;
+    font-size: 24px;
 }
 
 .body, .instructions {
@@ -91,10 +81,11 @@
 
 .eraser-btn, .clear-btn, .color-picker-btn {
     background-color: #eeecff;
-    padding: 5px;
+    padding: 10px;
     border: 2px solid black;
     margin: 2px;
     width: 120px;
+    font-size: 24px;
 }
 
 .color-picker-btn {
@@ -106,8 +97,8 @@
 
 .title {
     font-size: 100px;
-    align-self: flex-start;
-    padding-top: 100px;
+    align-self: center;
+    padding-bottom: 100px;
     max-width: 200px;
     text-align: center;
     color: white;
