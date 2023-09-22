@@ -4,10 +4,12 @@
 
 function createCanvas() {
     let myNode;
+    let cuteFaceIndexes = [23,24,38,39,40,41,42,43,44,54,61,70,78,87,94,103,104,105,106,107,108,109,110,118,127,133,143,148,149,151,152,155,156,159,160,164,167,168,171,172,176,179,180,183,184,187,188,192,195,208,211,224,227,231,235,240,243,247,248,249,250,251,256]
     for (let i = 0; i < 256; i++) {
         myNode = document.createElement('div');
         myNode.classList.add('pixel');
         myNode.id = (i+1);
+        if (cuteFaceIndexes.includes(+myNode.id)) myNode.style.backgroundColor = 'black';
         canvas.appendChild(myNode);
     }
 }
